@@ -1,7 +1,12 @@
-import { useCallback } from "react";
+import React, { FC, useCallback } from "react";
 import style from "./Layout.module.css";
 
-export default function Layout({ renderHeader, children }) {
+type Props = {
+  renderHeader: Function;
+  children: React.ReactNode;
+};
+
+const Layout: FC<Props> = ({ renderHeader, children }) => {
   const HeaderComponent = useCallback(() => {
     return <>{renderHeader()}</>;
   }, [renderHeader]);
@@ -14,4 +19,6 @@ export default function Layout({ renderHeader, children }) {
       <div className={style.contentWrapper}>{children}</div>
     </div>
   );
-}
+};
+
+export default Layout;

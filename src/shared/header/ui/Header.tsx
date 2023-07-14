@@ -1,5 +1,7 @@
 import style from "./Header.module.css";
 
-export default function Header() {
-  return <div className={style.header}>HEADER</div>;
-}
+const Header = () => {
+  return <header className={style.header}>HEADER</header>;
+};
+
+export default Header;

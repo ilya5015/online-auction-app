@@ -1,5 +1,5 @@
-import { Product } from "@/shared/product/model/product";
-import { product } from "@/shared/product/model/product";
+import { Product } from "@/entities/product/model/product";
+import { product } from "@/entities/product/model/product";
 
 type Cart = {
   userId: number;
