@@ -1,5 +1,5 @@
-import Header from "@/shared/header/ui/Header";
-import Layout from "@/shared/layout/ui/Layout";
+import Header from "@/shared/header/Header";
+import Layout from "@/shared/layout/Layout";
 import { product } from "@/entities/product/model/product";
 import ProductCardsList from "@/widgets/productCardsList/ui/ProductCardsList";
 import ProductCard from "@/widgets/ProductCard/ui/ProductCard";
