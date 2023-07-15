@@ -5,6 +5,7 @@ export type Auction = {
   allBets: Array<Bet>;
   opening: Date;
   closing: Date;
+  productId: number;
 };
 
 export const auction: Auction = {
@@ -12,4 +13,5 @@ export const auction: Auction = {
   allBets: [{ ...bet }, { ...bet }, { ...bet }],
   opening: new Date(),
   closing: new Date(),
+  productId: 3,
 };

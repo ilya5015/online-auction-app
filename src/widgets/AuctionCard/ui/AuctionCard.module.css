@@ -1,0 +1,14 @@
+.auctionCardWrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.auctionCardProductWrapper {
+    display: flex;
+    flex-direction: row;
+}
+
+.auctionCardProductIdHref:hover {
+    color: blue;
+    text-decoration: dashed;
+}

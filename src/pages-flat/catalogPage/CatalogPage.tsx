@@ -1,9 +1,10 @@
 import Header from "@/shared/header/Header";
 import Layout from "@/shared/layout/Layout";
 import { product } from "@/entities/product/model/product";
-import ProductCardsList from "@/widgets/productCardsList/ui/ProductCardsList";
+
 import ProductCard from "@/widgets/ProductCard/ui/ProductCard";
 import { useMemo } from "react";
+import CardsList from "@/widgets/CardsList/ui/CardsList";
 
 const productsList = [{ ...product }, { ...product }, { ...product }];
 
@@ -17,8 +18,8 @@ const Catalog = () => {
   );
 
   return (
-    <Layout renderHeader={Header}>
-      <ProductCardsList productCardsList={productCardsList} />
+    <Layout headerComponent={Header}>
+      <CardsList cardsList={productCardsList} />
     </Layout>
   );
 };

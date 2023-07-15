@@ -2,14 +2,14 @@ import React, { FC, useCallback } from "react";
 import style from "./Layout.module.css";
 
 type Props = {
-  renderHeader: Function;
+  headerComponent: Function;
   children: React.ReactNode;
 };
 
-const Layout: FC<Props> = ({ renderHeader, children }) => {
+const Layout: FC<Props> = ({ headerComponent, children }) => {
   const HeaderComponent = useCallback(() => {
-    return <>{renderHeader()}</>;
-  }, [renderHeader]);
+    return <>{headerComponent()}</>;
+  }, [headerComponent]);
 
   return (
     <div className={style.mainLayout}>

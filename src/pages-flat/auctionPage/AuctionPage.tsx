@@ -1,16 +1,14 @@
-import { product } from "@/entities/product/model/product";
+import { auction } from "@/entities/auction/model/auction";
 import Header from "@/shared/header/Header";
 import Layout from "@/shared/layout/Layout";
-import AuctionCard from "@/widgets/AuctionCard/AuctionCard";
-import ProductCard from "@/widgets/ProductCard/ui/ProductCard";
+import AuctionCard from "@/widgets/AuctionCard/ui/AuctionCard";
 
-const productElem = { ...product };
+const auctionElem = { ...auction };
 
 const AuctionPage = () => {
   return (
-    <Layout renderHeader={Header}>
-      <ProductCard product={productElem} />
-      <AuctionCard />
+    <Layout headerComponent={Header}>
+      <AuctionCard auction={auctionElem} />
     </Layout>
   );
 };

@@ -1,3 +1,3 @@
-import Catalog from "@/pages-flat/catalog/Catalog";
+import Catalog from "@/pages-flat/catalogPage/CatalogPage";
 
 export default Catalog;
