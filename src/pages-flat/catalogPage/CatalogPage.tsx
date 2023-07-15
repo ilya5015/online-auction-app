@@ -6,8 +6,18 @@ import ProductCard from "@/widgets/ProductCard/ui/ProductCard";
 import { useMemo } from "react";
 import CardsList from "@/widgets/CardsList/ui/CardsList";
 import Subheader from "@/shared/subheader/Subheader";
+import Link from "next/link";
 
 const productsList = [{ ...product }, { ...product }, { ...product }];
+
+const navLinksArray = [
+  { title: "Catalog", route: "/catalog" },
+  { title: "Auctions", route: "/auctions" },
+];
+
+const subheaderComponent = () => <Subheader navLinksArray={navLinksArray} />;
+
+const headerComponent = () => <Header renderSubheader={subheaderComponent} />;
 
 const Catalog = () => {
   const productCardsList = useMemo(
@@ -17,8 +27,6 @@ const Catalog = () => {
       }),
     [productsList]
   );
-
-  const headerComponent = () => <Header renderSubheader={Subheader} />;
 
   return (
     <Layout headerComponent={headerComponent}>

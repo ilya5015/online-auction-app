@@ -3,3 +3,11 @@
     
     border-bottom: 1px solid #c7d5e0;
 }
+
+.navlink {
+    margin: 10px;
+}
+
+.navlinkActive {
+    color: white;
+}
