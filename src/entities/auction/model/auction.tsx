@@ -6,6 +6,7 @@ export type Auction = {
   opening: Date;
   closing: Date;
   productId: number;
+  auctionId: number;
 };
 
 export const auction: Auction = {
@@ -14,4 +15,5 @@ export const auction: Auction = {
   opening: new Date(),
   closing: new Date(),
   productId: 3,
+  auctionId: 1,
 };

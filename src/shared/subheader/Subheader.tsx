@@ -25,10 +25,10 @@ const Subheader: React.FC<Props> = ({ navLinksArray }) => {
         console.log("pathname", pathname, navLinksArray);
         return (
           <span
-            className={
-              (style.navlink,
-              pathname === navLink.route ? style.navlinkActive : "")
-            }
+            className={`
+              ${style.navlink} 
+              ${pathname === navLink.route ? style.navlinkActive : ""}
+                `}
           >
             <Link href={navLink.route}>{navLink.title}</Link>
           </span>

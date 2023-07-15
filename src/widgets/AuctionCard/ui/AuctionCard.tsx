@@ -2,13 +2,17 @@
 
 import { FC } from "react";
 import style from "./AuctionCard.module.css";
-import PlaceBetButton from "@/features/placeBet/ui/PlaceBetButton";
+import PlaceBetForm from "@/features/placeBet/ui/PlaceBetForm/PlaceBetForm";
 import { fetchPlaceBet } from "@/features/placeBet/api/fetchPlaceBet";
 import { Auction } from "@/entities/auction/model/auction";
 import Link from "next/link";
 
 type Props = {
   auction: Auction;
+};
+
+type HandleOnSubmitData = {
+  betValue: number;
 };
 
 const AuctionCard: FC<Props> = ({ auction }) => {
@@ -21,7 +25,12 @@ const AuctionCard: FC<Props> = ({ auction }) => {
           {"№" + auction.productId}
         </Link>
       </div>
-      <PlaceBetButton onClick={fetchPlaceBet} />
+      <PlaceBetForm
+        handleOnSubmit={(data: HandleOnSubmitData) => {
+          const fetchData = { ...data, auctionId: auction.auctionId };
+          fetchPlaceBet(fetchData);
+        }}
+      />
     </div>
   );
 };
