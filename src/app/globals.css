@@ -2,6 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
+
 :root {
   height: 100%;
 }
@@ -9,4 +10,5 @@
 
 body {
   height: 100%;
+  color: #c7d5e0
 }
